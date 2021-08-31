@@ -1,0 +1,26 @@
+@url=https://api.github.com
+@id=adiynil
+@repo=cloudimg
+@dir=/
+
+###
+# @name testAuth
+
+GET {{url}}/notifications HTTP/1.1
+Authorization: token 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
+
+###
+# @name getRepos
+GET {{url}}/users/{{id}}/repos HTTP/1.1
+
+###
+# @name getDetail
+GET {{url}}/repos/{{id}}/{{repo}}/contents/{{dir}} HTTP/1.1
+
+###
+# @name uploadOne
+
+
+###
+# @name deleteOne
+DELETE {{url}}/repos/{{id}}/{{repo}}/contents/{{dir}}/ HTTP/1.1
